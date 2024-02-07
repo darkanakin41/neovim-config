@@ -8,6 +8,15 @@ return {
   },
   config = function()
     vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>')
+    require('neo-tree').setup({
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = false,
+          hide_hidden = false,
+        }
+      }
+    })
   end
 }
 
