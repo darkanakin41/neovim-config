@@ -4,8 +4,7 @@ return {
   config = function() 
     local treesitterConfig = require("nvim-treesitter.configs")
     treesitterConfig.setup({
-      ensure_installed = { "lua", "php", "javascript", "sql", "typescript", "html", "twig" },
-      sync_install = false,
+      auto_install = true,
       highlight = { enable = true },
       indent = { enable = true },
     })
